@@ -1,19 +1,12 @@
-# Ecom-React-Spring
-An ecommerce website made on react and spring framework, implementing JWT for Authentication and Authorisation And implementing Cloud For storage
+# React + Vite
 
-<h2>E-commerce website</h2>
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-<h3>Parts that have already Completed </h3>
-<ul>
-  <li>Using react-Redux for frontend</li>
-  <li>Spring Framework For Backend</li>
-  <li>implemented JWT Tokens for authentication and Authorization </li>
-</ul>
-<h3>Currently Working on</h3>
-<ul>
-  <li>
-    implement Cloud for storage 
-  </li>
-  <li>implement Load Mangement/ Rate Limiter</li>
-  <li>Will implement Data Sync for Consistency</li>
-</ul>
+Currently, two official plugins are available:
+
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+## Expanding the ESLint configuration
+
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
