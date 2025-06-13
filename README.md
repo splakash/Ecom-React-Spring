@@ -2,7 +2,7 @@
 
 Creating a Spring boot, react js E-commerce website 
 
-<h1 style='text-color:red'>Agenda To create this App 
+<h1 style='color:red'>Agenda To create this App 
 </h1>
 
   <ul>
@@ -11,6 +11,9 @@ Creating a Spring boot, react js E-commerce website
     </h2> </li>
     <li><h2>
       Implementing JWT Tokens For Authorization and Authentication
+    </h2> </li>
+    <li><h2>
+      Integrating caching using Spring @EnableCaching Configuration
     </h2> </li>
   </ul>
 
