@@ -1,6 +1,6 @@
 import { useEffect ,useState } from 'react';
 import { Link } from 'react-router-dom';
-
+import Footer from '../components/Footer';
 
 function Home() {
   const url = "https://dummyjson.com/products/categories";
@@ -136,7 +136,9 @@ function Home() {
           </div>
         </div>
       </div>
+      <Footer/>
     </div>
+    
   );
 }
 

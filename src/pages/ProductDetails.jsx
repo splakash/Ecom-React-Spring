@@ -2,7 +2,7 @@ import { useState,useEffect } from 'react';
 import { useNavigate, useParams, useSearchParams } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { addToCart } from '../store/cartSlice';
-
+import Footer from '../components/Footer';
 
 
 
@@ -82,6 +82,7 @@ function ProductDetail() {
           </button>
         </div>
       </div>
+      <Footer/>
     </div>
   );
 }

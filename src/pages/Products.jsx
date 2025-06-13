@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { useSearchParams } from "react-router-dom";
 import { addToCart } from '../store/cartSlice';
-
+import Footer from '../components/Footer';
 // Mock product data (in a real app, this would come from an API)
 
 
@@ -104,6 +104,7 @@ const [photos, setPhotos] = useState([]);
           </div>
         ))}
       </div>
+      <Footer/>
     </div>
   );
 }
