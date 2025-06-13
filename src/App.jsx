@@ -7,7 +7,7 @@ import Products from './pages/Products';
 import Cart from './pages/Cart';
 import Login from './pages/Login';
 import Register from './pages/Register';
-import ProductDetail from './pages/ProductDetails';
+import ProductDetails from './pages/ProductDetails';
 
 function App() {
   return (
@@ -19,7 +19,7 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/products" element={<Products />} />
-              <Route path="/products/:id" element={<ProductDetail />} />
+              <Route path="/products/:id" element={<ProductDetails />} />
               <Route path="/cart" element={<Cart />} />
               <Route path="/login" element={<Login />} />
               <Route path="/register" element={<Register />} />

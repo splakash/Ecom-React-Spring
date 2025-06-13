@@ -1,27 +1,22 @@
-
+import { useEffect ,useState } from 'react';
 import { Link } from 'react-router-dom';
 
+
 function Home() {
-  const categories = [
-    {
-      id: 1,
-      name: 'T-Shirts',
-      image: "photo-1621072156002-e2fccdc0b176.avif",
-      description: 'Comfortable and stylish t-shirts for every occasion',
-    },
-    {
-      id: 2,
-      name: 'Pants',
-      image: "photo-1621072156002-e2fccdc0b176.avif",
-      description: 'High-quality pants that fit perfectly',
-    },
-    {
-      id: 3,
-      name: 'Hoodies',
-      image: "photo-1621072156002-e2fccdc0b176.avif",
-      description: 'Stay warm and look cool with our hoodies',
-    },
-  ];
+  const url = "https://dummyjson.com/products/categories";
+  const [category, setCategory] = useState([]);
+  const fetchInfo = () => {
+    return fetch(url)
+      .then((res) => res.json())
+      .then((d) => setCategory(d))
+  }
+
+
+  useEffect(() => {
+    fetchInfo();
+  }, []);
+
+
 
   return (
     <div>
@@ -31,6 +26,7 @@ function Home() {
         <p className="text-xl mb-8">Discover the latest trends in clothing</p>
         <Link
           to="/products"
+          
           className="inline-block bg-white text-indigo-600 py-3 px-8 rounded-md font-semibold hover:bg-gray-100"
         >
           Shop Now
@@ -41,21 +37,21 @@ function Home() {
       <div className="py-16 px-4">
         <h2 className="text-3xl font-bold text-center mb-12">Shop by Category</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {categories.map((category) => (
+          {category.map((category,index) => (
             <div
-              key={category.id}
+              key={index}
               className="bg-white rounded-lg shadow-md overflow-hidden transform transition duration-300 hover:scale-105"
             >
               <img
-                src={category.image}
+                src='photo-1621072156002-e2fccdc0b176.avif'
                 alt={category.name}
                 className="w-full h-48 object-cover"
               />
               <div className="p-6">
                 <h3 className="text-xl font-semibold mb-2">{category.name}</h3>
-                <p className="text-gray-600 mb-4">{category.description}</p>
+                <p className="text-gray-600 mb-4">{category.name}</p>
                 <Link
-                  to="/products"
+                  to={`/products?category=${category.slug}`}
                   className="inline-block bg-indigo-600 text-white py-2 px-6 rounded-md hover:bg-indigo-700"
                 >
                   View Products
